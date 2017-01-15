@@ -5,7 +5,7 @@ using namespace std;
 int main()
 
 {
-    int a[20], nr, i;
+    int a[20], nr, i, j, aux;
 
     cout << "Numarul de elemente din sirul a (maximum 20) ";
     cin >> nr;
@@ -13,15 +13,19 @@ int main()
         cout << "a[" << i << "] = ";
         cin >> a[i];
     }
-    int max;
-    max=a[0];
 
-    for (i=1; i < nr; i++){
-        if (max < a[i])
-            max= a[i];
+
+    for (i = 0, j = nr - 1; i < j; i++, j--){
+       aux=a[i];
+       a[i]=a[j];
+       a[j]=aux;
 
     }
-    cout << "Valoarea maxima " << max << endl;
+for (i = 0; i < nr; i++) {
+        cout << "a[" << i << "] = " << a[i] << '\n' ;
+
+}
+cout<< endl;
 
    return 0;
 }
