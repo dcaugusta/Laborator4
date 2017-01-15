@@ -13,12 +13,15 @@ int main()
         cout << "a[" << i << "] = ";
         cin >> a[i];
     }
-    long sum ;
+    int max;
+    max=a[0];
 
-    for (i = 0, sum = 0; i < nr; i++){
-        sum=sum+a[i];
+    for (i=1; i < nr; i++){
+        if (max < a[i])
+            max= a[i];
+
     }
-    cout << "Suma elementelor este " << sum << endl;
+    cout << "Valoarea maxima " << max << endl;
 
    return 0;
 }
