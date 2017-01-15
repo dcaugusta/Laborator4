@@ -14,12 +14,14 @@ int main()
         cin >> a[i];
     }
 
-    aux= a[0];
 
-    for (i = 0 ; i <nr-1 ; i++){
-       a[i]= a[i+1];
+for (i = 0; i < nr; i++) {
+    if ( a[i] > a[i+1]){
+        aux = a[i];
+        a[i]=a[i+1];
+        a[i+1]=aux;
         }
-   a[nr-1]=aux;
+    }
 for (i = 0; i < nr; i++) {
         cout << "a[" << i << "] = " << a[i] << '\n' ;
 
